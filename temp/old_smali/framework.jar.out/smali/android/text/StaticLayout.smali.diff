@@ -1,0 +1,41 @@
+*** ./smali/android/text/StaticLayout.smali	2013-10-12 21:22:21.264391012 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/text/StaticLayout.smali	2013-10-12 21:25:39.804400619 +0800
+***************
+*** 3,8 ****
+--- 3,16 ----
+  .source "StaticLayout.java"
+  
+  
++ # annotations
++ .annotation system Ldalvik/annotation/MemberClasses;
++     value = {
++         Landroid/text/StaticLayout$Injector;
++     }
++ .end annotation
++ 
++ 
+  # static fields
+  .field private static final CHAR_FIRST_CJK:C = '\u2e80'
+  
+***************
+*** 1001,1006 ****
+--- 1009,1027 ----
+      goto/16 :goto_3
+  .end method
+  
++ .method static callIsIdeographic(CZ)Z
++     .locals 1
++     .parameter "c"
++     .parameter "includeNonStarters"
++ 
++     .prologue
++     invoke-static {p0, p1}, Landroid/text/StaticLayout;->isIdeographic(CZ)Z
++ 
++     move-result v0
++ 
++     return v0
++ .end method
++ 
+  .method private static final isIdeographic(CZ)Z
+      .locals 3
+      .parameter "c"

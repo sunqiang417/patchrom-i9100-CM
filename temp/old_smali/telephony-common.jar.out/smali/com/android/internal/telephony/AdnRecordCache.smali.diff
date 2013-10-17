@@ -1,0 +1,13 @@
+*** ./smali/com/android/internal/telephony/AdnRecordCache.smali	2013-10-12 21:22:06.232390283 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/telephony-common.jar.out/./smali/com/android/internal/telephony/AdnRecordCache.smali	2013-10-12 21:25:18.032399566 +0800
+***************
+*** 1,4 ****
+! .class public final Lcom/android/internal/telephony/AdnRecordCache;
+  .super Landroid/os/Handler;
+  .source "AdnRecordCache.java"
+  
+--- 1,4 ----
+! .class public Lcom/android/internal/telephony/AdnRecordCache;
+  .super Landroid/os/Handler;
+  .source "AdnRecordCache.java"
+  

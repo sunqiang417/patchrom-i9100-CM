@@ -1,0 +1,19 @@
+*** ./smali/android/media/MediaRecorder.smali	2013-10-12 21:22:29.696391419 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/media/MediaRecorder.smali	2013-10-12 21:25:52.760401247 +0800
+***************
+*** 189,195 ****
+      .locals 1
+  
+      .prologue
+!     const/16 v0, 0x8
+  
+      return v0
+  .end method
+--- 189,195 ----
+      .locals 1
+  
+      .prologue
+!     const/16 v0, 0x9
+  
+      return v0
+  .end method

@@ -1,0 +1,19 @@
+*** ConnectivityService.smali	2013-10-12 21:21:57.532389862 +0800
+--- ConnectivityService.smali	2013-10-12 21:25:08.072399084 +0800
+***************
+*** 1367,1373 ****
+  
+      .end local v8           #arr$:[Landroid/net/NetworkConfig;
+      :cond_12
+!     const/16 v2, 0xe
+  
+      new-array v2, v2, [Ljava/util/ArrayList;
+  
+--- 1370,1376 ----
+  
+      .end local v8           #arr$:[Landroid/net/NetworkConfig;
+      :cond_12
+!     const/16 v2, 0xf
+  
+      new-array v2, v2, [Ljava/util/ArrayList;
+  

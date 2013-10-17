@@ -1,0 +1,33 @@
+*** ./smali/android/net/DhcpStateMachine.smali	2013-10-12 21:22:26.876391282 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/net/DhcpStateMachine.smali	2013-10-12 21:25:48.320401032 +0800
+***************
+*** 11,17 ****
+          Landroid/net/DhcpStateMachine$WaitBeforeStartState;,
+          Landroid/net/DhcpStateMachine$StoppedState;,
+          Landroid/net/DhcpStateMachine$DefaultState;,
+!         Landroid/net/DhcpStateMachine$DhcpAction;
+      }
+  .end annotation
+  
+--- 11,18 ----
+          Landroid/net/DhcpStateMachine$WaitBeforeStartState;,
+          Landroid/net/DhcpStateMachine$StoppedState;,
+          Landroid/net/DhcpStateMachine$DefaultState;,
+!         Landroid/net/DhcpStateMachine$DhcpAction;,
+!         Landroid/net/DhcpStateMachine$Injector;
+      }
+  .end annotation
+  
+***************
+*** 547,552 ****
+--- 548,557 ----
+  
+      :cond_0
+      :goto_0
++     invoke-static {v0}, Landroid/net/DhcpStateMachine$Injector;->checkDhcpInfoInternal(Landroid/net/DhcpInfoInternal;)Z
++ 
++     move-result v3
++ 
+      if-eqz v3, :cond_4
+  
+      iget v4, v0, Landroid/net/DhcpInfoInternal;->leaseDuration:I

@@ -1,0 +1,56 @@
+*** ./smali/com/android/internal/telephony/SMSDispatcher.smali	2013-10-12 21:22:05.656390256 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/telephony-common.jar.out/./smali/com/android/internal/telephony/SMSDispatcher.smali	2013-10-12 21:25:17.180399525 +0800
+***************
+*** 8,14 ****
+      value = {
+          Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;,
+          Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;,
+!         Lcom/android/internal/telephony/SMSDispatcher$SettingsObserver;
+      }
+  .end annotation
+  
+--- 8,15 ----
+      value = {
+          Lcom/android/internal/telephony/SMSDispatcher$ConfirmDialogListener;,
+          Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;,
+!         Lcom/android/internal/telephony/SMSDispatcher$SettingsObserver;,
+!         Lcom/android/internal/telephony/SMSDispatcher$Injector;
+      }
+  .end annotation
+  
+***************
+*** 1228,1233 ****
+--- 1229,1243 ----
+      .parameter "pdus"
+  
+      .prologue
++     invoke-static {p0, p1}, Lcom/android/internal/telephony/SMSDispatcher$Injector;->checkSmsCmd(Lcom/android/internal/telephony/SMSDispatcher;[[B)Z
++ 
++     move-result v1
++ 
++     if-eqz v1, :cond_miui_0
++ 
++     return-void
++ 
++     :cond_miui_0
+      new-instance v0, Landroid/content/Intent;
+  
+      const-string v1, "android.provider.Telephony.SMS_RECEIVED"
+***************
+*** 1260,1265 ****
+--- 1270,1284 ----
+      .parameter "port"
+  
+      .prologue
++     invoke-static {p0, p1}, Lcom/android/internal/telephony/SMSDispatcher$Injector;->checkSmsCmd(Lcom/android/internal/telephony/SMSDispatcher;[[B)Z
++ 
++     move-result v2
++ 
++     if-eqz v2, :cond_miui_0
++ 
++     return-void
++ 
++     :cond_miui_0
+      new-instance v2, Ljava/lang/StringBuilder;
+  
+      invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,0 +1,37 @@
+*** ./smali/android/view/LayoutInflater.smali	2013-10-12 21:22:51.740392485 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/view/LayoutInflater.smali	2013-10-12 21:26:18.252402480 +0800
+***************
+*** 10,16 ****
+          Landroid/view/LayoutInflater$FactoryMerger;,
+          Landroid/view/LayoutInflater$Factory2;,
+          Landroid/view/LayoutInflater$Factory;,
+!         Landroid/view/LayoutInflater$Filter;
+      }
+  .end annotation
+  
+--- 10,17 ----
+          Landroid/view/LayoutInflater$FactoryMerger;,
+          Landroid/view/LayoutInflater$Factory2;,
+          Landroid/view/LayoutInflater$Factory;,
+!         Landroid/view/LayoutInflater$Filter;,
+!         Landroid/view/LayoutInflater$Injector;
+      }
+  .end annotation
+  
+***************
+*** 1502,1507 ****
+--- 1503,1516 ----
+      invoke-virtual {p0}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
+  
+      move-result-object v1
++ 
++     invoke-static {v1, p1}, Landroid/view/LayoutInflater$Injector;->getResourceId(Landroid/content/Context;I)I
++ 
++     move-result p1
++ 
++     invoke-virtual {p0}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
++ 
++     move-result-object v1
+  
+      invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+  

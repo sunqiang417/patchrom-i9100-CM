@@ -1,0 +1,20 @@
+*** GSMPhone.smali	2013-10-12 21:22:03.460390150 +0800
+--- GSMPhone.smali	2013-10-12 21:25:14.248399384 +0800
+***************
+*** 7,13 ****
+  .annotation system Ldalvik/annotation/MemberClasses;
+      value = {
+          Lcom/android/internal/telephony/gsm/GSMPhone$2;,
+!         Lcom/android/internal/telephony/gsm/GSMPhone$NetworkSelectMessage;
+      }
+  .end annotation
+  
+--- 7,14 ----
+  .annotation system Ldalvik/annotation/MemberClasses;
+      value = {
+          Lcom/android/internal/telephony/gsm/GSMPhone$2;,
+!         Lcom/android/internal/telephony/gsm/GSMPhone$NetworkSelectMessage;,
+!         Lcom/android/internal/telephony/gsm/GSMPhone$Injector;
+      }
+  .end annotation
+  

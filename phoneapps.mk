@@ -1,0 +1,32 @@
+local-phone-apps = ApplicationsProvider \
+                   BackupRestoreConfirmation \
+                   BasicDreams \
+                   Bluetooth \
+                   CellBroadcastReceiver \
+                   CertInstaller \
+                   ChromeBookmarksSyncAdapter \
+                   DefaultContainerService \
+                   DrmProvider \
+                   FaceLock \
+                   Galaxy4 \
+                   HoloSpiralWallpaper \
+                   HTMLViewer \
+                   InputDevices \
+                   KeyChain \
+		   LatinIME \
+                   LatinImeDictionaryPack \
+                   LiveWallpapers \
+                   LiveWallpapersPicker \
+                   MagicSmokeWallpapers \
+                   MediaProvider \
+                   MediaUploader \
+                   NoiseField \
+                   PhaseBeam \
+                   PhotoTable \
+                   PicoTts \
+                   SamsungServiceMode \
+                   SharedStorageBackup \
+				   Stk \
+                   UserDictionaryProvider \
+                   VisualizationWallpapers \
+                   WAPPushManager

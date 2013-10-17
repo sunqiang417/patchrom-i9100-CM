@@ -1,0 +1,40 @@
+*** PackageManagerService.smali	2013-10-12 21:22:01.344390047 +0800
+--- PackageManagerService.smali	2013-10-12 21:25:12.180399282 +0800
+***************
+*** 2806,2811 ****
+  
+      iput-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mRequiredVerifierPackage:Ljava/lang/String;
+  
+      monitor-exit v41
+      :try_end_9
+      .catchall {:try_start_9 .. :try_end_9} :catchall_0
+--- 2821,2828 ----
+  
+      iput-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mRequiredVerifierPackage:Ljava/lang/String;
+  
++     invoke-static {}, Lcom/android/server/pm/ExtraPackageManagerServices;->postScanPackages()V
++ 
+      monitor-exit v41
+      :try_end_9
+      .catchall {:try_start_9 .. :try_end_9} :catchall_0
+***************
+*** 15443,15448 ****
+      .end local v25           #i:I
+      .end local v49           #renamed:Ljava/lang/String;
+      :cond_18
+      move-object/from16 v0, v45
+  
+      iget-object v3, v0, Lcom/android/server/pm/PackageSetting;->origPackage:Lcom/android/server/pm/PackageSettingBase;
+--- 15492,15503 ----
+      .end local v25           #i:I
+      .end local v49           #renamed:Ljava/lang/String;
+      :cond_18
++     move-object/from16 v0, p1
++ 
++     move-object/from16 v1, v45
++ 
++     invoke-static {v0, v1}, Lcom/android/server/pm/PackageManagerService$Injector;->addMiuiExtendFlags(Landroid/content/pm/PackageParser$Package;Lcom/android/server/pm/PackageSetting;)V
++ 
+      move-object/from16 v0, v45
+  
+      iget-object v3, v0, Lcom/android/server/pm/PackageSetting;->origPackage:Lcom/android/server/pm/PackageSettingBase;

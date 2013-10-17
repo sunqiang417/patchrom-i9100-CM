@@ -1,0 +1,137 @@
+===================================
+Since Thu Sep  5 03:17:38 UTC 2013
+===================================
+
+   * android
+b6ef8e9 Add manifest for 10.1.3
+
+   * frameworks/base
+eccf4c5 Merge "Re-implement orientation aware volume buttons at lower level" into cm-10.1
+1311a90 Rework thumbnail handling
+22a4d65 Re-implement orientation aware volume buttons at lower level
+
+   * frameworks/opt/telephony
+949aeb6 GsmSST: Disregard any invalid verbose values for timezones in NITZ requests
+0d93107 HTCTegra3RIL: Add custom RIL for correct STK handling (1/2)
+
+   * hardware/qcom/audio-caf
+af107a1 alsa_sound: Fix audio over Miracast
+e684d58 Merge "msm7x30: disable logcat spam" into cm-10.1
+d89f5d2 msm7x30: disable logcat spam
+
+   * hardware/ti/wlan
+271f2fb Merge "WLAN - wl12xx: Update version to ol_R5.SP5.01" into cm-10.1
+625bf56 Merge "WLAN - compat_wl12xx: more file cleanups" into cm-10.1
+27a3b8e WLAN - wl12xx: Update version to ol_R5.SP5.01
+8f62c4f WLAN - wl12xx: Update to R5.SP5.01 from R5.SP3.06 package
+9fcfaee WLAN - compat_wl12xx: more file cleanups
+
+   * kernel/samsung/smdk4412
+9c2e2bc Revert "wakelock: use single threaded workqueueus"
+dc02054 Revert "max77693: Standardize the output of the "online" property"
+a88f2dd max77693: Standardize the output of the "online" property
+
+   * libcore
+7687ea6 Do not apply the PRNG workarounds if an explicit seed is given
+
+   * packages/apps/CMAccount
+11aa65b Revert "Use framework libs instead of local."
+8577bae Merge "CMAccount: FR translation" into cm-10.2
+fa4490e Do not expire refresh token on HTTP 400
+58fc007 CMAccount: FR translation
+e7e9f73 Merge "CMAccount: DE translations" into cm-10.2
+ab35b43 Fix aapt string warnings [translation]
+b7d2df6 CMAccount: zh-tw translations
+5ac0a38 Merge "CMAccount: CA translations" into cm-10.2
+0759922 Merge "CMAccount: NL translations" into cm-10.2
+9fd9dea Merge "CMAccount: PT-BR update translations" into cm-10.2
+238ec33 CMAccount: CA translations
+7220350 CMAccount: DE translations
+c2a3451 CMAccount: RU translation
+6ca668d Merge "CMAccount: FI translations" into cm-10.2
+630fef2 Merge "CMAccount: Add Polish translation" into cm-10.2
+36c037d CMAccount: NL translations
+8b01e1d CMAccount: PT-BR update translations
+f2801e6 Merge "CMAccount: HU translation" into cm-10.2
+d57dd48 Merge "CMAccount: IT translation" into cm-10.2
+643e00a CMAccount: IT translation
+0b6a5e0 CMAccount: FI translations
+407add1 CMAccount: HU translation
+c680ef3 CMAccount: Japanese translation
+1247071 CMAccount: Add Polish translation
+e451856 Merge "CMAccount: RU translation" into cm-10.2
+73eb382 CMAccount: CS translation
+6f31acb CMAccount: PT-BR update translations
+ecc566d CMAccount: EL translations
+712d028 CMAccount: RU translation
+220c7a4 CMAccount: PT-BR update translations
+2c94e87 Merge "CMAccount: ES translations" into cm-10.2
+07e961d Merge "Do not apply PRNGFixes locally" into cm-10.2
+e2ae45c Do not upload public keys until ping is completed
+26ca92d Do not apply PRNGFixes locally
+1360153 CMAccount: ES translations
+ba84d9d Handle public_keys_exhausted message
+0bcef4f Check minimum required application version
+c9f1fc4 Always upload all public keys
+
+   * packages/apps/CMUpdater
+859603f Merge "Gracefully handle unstable network conditions." into cm-10.1
+e44a38b Gracefully handle unstable network conditions.
+40bd30c CMUpdater: RU translation
+36cc49c Merge "Reset preference state correctly if download initiation failed." into cm-10.1
+7ae8be7 Merge "Don't parcel change log." into cm-10.1
+c1059ec Reset preference state correctly if download initiation failed.
+fc7c482 Don't parcel change log.
+
+   * packages/apps/Calculator
+70abe85 Calculator: PT-PT translations
+
+   * packages/apps/Camera
+944a56e Camera: zh-rTW translations
+51e52db Camera: fix gfx undefined buffer issue
+
+   * packages/apps/DSPManager
+ba0309a Listen to A2DP profile connection instead of device connection.
+cbccfae Accept any kind of A2DP device for using the BT preferences, not only headsets.
+
+   * packages/apps/Gallery2
+b260c0f Gallery2: Fix show on map typo
+5ed2855 Gallery2: Fix showOnMap method
+
+   * packages/apps/Mms
+1b44332 Mms: Fix QuickMessage mdpi/hdpi layouts
+6d89bbc Mms: Fix QuickMessage mdpi/hdpi layouts
+
+   * packages/apps/Phone
+5d3888b Fix ClassCastException on disconnect for blacklisted calls.
+
+   * packages/apps/Settings
+b1755aa Settings: CA translations
+7ace091 Merge "Settings: CA translations" into cm-10.1
+
+   * packages/apps/Torch
+3a1e1a3 Torch: only write to sysfs if not already on
+
+   * packages/providers/ContactsProvider
+d5956fd Fix IllegalArgumentException.
+
+   * system/core
+ba213e9 ueventd: allow platform devices to have just a /devices/ prefix - DO NOT MERGE
+
+   * vendor/cm
+85e9de1 10.1.3
+2b287af Add Galaxy S4 Mini maintainer
+b4b8de5 Merge tag 'cm-10.1.3-RC2' into cm-10.1.3
+189de84 cm: Add CMAccount to the build
+590a984 Merge "Bring back the old CyanAlarm alarm tone" into cm-10.1
+
+   * vendor/sony
+65ab400 Initial blob for togari and honami (14.1.x.1.526)
+c6c6fb0 qcom-common: add Adreno 330 blob
+b50b2c7 fusion3: add system_monitor
+280836b qcom-common: adreno AU_LINUX_ANDROID_JB_2.5.6.04.02.02.093.061
+94281f0 fusion3: update blob from 4.2.2
+
+   * vendor/tmobile/apps/ThemeChooser
+3ef20e8 Show the theme name in the choice screen
+

@@ -1,0 +1,49 @@
+*** ./smali/android/graphics/drawable/AnimationDrawable$AnimationState.smali	2013-10-12 21:22:39.868391912 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/graphics/drawable/AnimationDrawable$AnimationState.smali	2013-10-12 21:26:05.832401879 +0800
+***************
+*** 1,4 ****
+! .class final Landroid/graphics/drawable/AnimationDrawable$AnimationState;
+  .super Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;
+  .source "AnimationDrawable.java"
+  
+--- 1,4 ----
+! .class public final Landroid/graphics/drawable/AnimationDrawable$AnimationState;
+  .super Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;
+  .source "AnimationDrawable.java"
+  
+***************
+*** 9,15 ****
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x1a
+      name = "AnimationState"
+  .end annotation
+  
+--- 9,15 ----
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x1c
+      name = "AnimationState"
+  .end annotation
+  
+***************
+*** 171,173 ****
+--- 171,186 ----
+  
+      return-object v0
+  .end method
++ 
++ .method setDuration(II)V
++     .locals 1
++     .parameter "frame"
++     .parameter "value"
++ 
++     .prologue
++     iget-object v0, p0, Landroid/graphics/drawable/AnimationDrawable$AnimationState;->mDurations:[I
++ 
++     aput p2, v0, p1
++ 
++     return-void
++ .end method

@@ -1,0 +1,18 @@
+*** ./smali/android/nfc/NfcManager.smali	2013-10-12 21:22:12.368390581 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/nfc/NfcManager.smali	2013-10-12 21:25:27.372400018 +0800
+***************
+*** 64,66 ****
+--- 64,76 ----
+  
+      return-object v0
+  .end method
++ 
++ .method public setPollDuration(I)I
++     .locals 1
++     .parameter "pollDurationMs"
++ 
++     .prologue
++     const/4 v0, 0x0
++ 
++     return v0
++ .end method

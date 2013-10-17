@@ -1,0 +1,38 @@
+*** ./smali/android/speech/tts/TextToSpeech$Connection.smali	2013-10-12 21:22:12.808390601 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/speech/tts/TextToSpeech$Connection.smali	2013-10-12 21:25:28.100400053 +0800
+***************
+*** 124,129 ****
+--- 124,156 ----
+      return-object v0
+  .end method
+  
++ .method public isConnected()Z
++     .locals 1
++ 
++     .prologue
++     iget-object v0, p0, Landroid/speech/tts/TextToSpeech$Connection;->mService:Landroid/speech/tts/ITextToSpeechService;
++ 
++     if-eqz v0, :cond_0
++ 
++     iget-object v0, p0, Landroid/speech/tts/TextToSpeech$Connection;->mService:Landroid/speech/tts/ITextToSpeechService;
++ 
++     invoke-interface {v0}, Landroid/speech/tts/ITextToSpeechService;->asBinder()Landroid/os/IBinder;
++ 
++     move-result-object v0
++ 
++     invoke-interface {v0}, Landroid/os/IBinder;->isBinderAlive()Z
++ 
++     move-result v0
++ 
++     :goto_0
++     return v0
++ 
++     :cond_0
++     const/4 v0, 0x0
++ 
++     goto :goto_0
++ .end method
++ 
+  .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
+      .locals 5
+      .parameter "name"

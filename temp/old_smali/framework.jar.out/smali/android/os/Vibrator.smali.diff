@@ -1,0 +1,16 @@
+*** ./smali/android/os/Vibrator.smali	2013-10-12 21:22:18.680390887 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/os/Vibrator.smali	2013-10-12 21:25:36.452400458 +0800
+***************
+*** 26,28 ****
+--- 26,36 ----
+  
+  .method public abstract vibrate([JI)V
+  .end method
++ 
++ .method public vibrateEx([B)V
++     .locals 0
++     .parameter "params"
++ 
++     .prologue
++     return-void
++ .end method

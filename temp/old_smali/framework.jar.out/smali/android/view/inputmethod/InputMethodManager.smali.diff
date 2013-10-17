@@ -1,0 +1,31 @@
+*** ./smali/android/view/inputmethod/InputMethodManager.smali	2013-10-12 21:22:51.592392479 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/view/inputmethod/InputMethodManager.smali	2013-10-12 21:26:18.104402474 +0800
+***************
+*** 9,15 ****
+          Landroid/view/inputmethod/InputMethodManager$PendingEvent;,
+          Landroid/view/inputmethod/InputMethodManager$FinishedEventCallback;,
+          Landroid/view/inputmethod/InputMethodManager$ControlledInputConnectionWrapper;,
+!         Landroid/view/inputmethod/InputMethodManager$H;
+      }
+  .end annotation
+  
+--- 9,16 ----
+          Landroid/view/inputmethod/InputMethodManager$PendingEvent;,
+          Landroid/view/inputmethod/InputMethodManager$FinishedEventCallback;,
+          Landroid/view/inputmethod/InputMethodManager$ControlledInputConnectionWrapper;,
+!         Landroid/view/inputmethod/InputMethodManager$H;,
+!         Landroid/view/inputmethod/InputMethodManager$Injector;
+      }
+  .end annotation
+  
+***************
+*** 3696,3701 ****
+--- 3697,3704 ----
+      iput-object v1, p0, Landroid/view/inputmethod/InputMethodManager;->mCurId:Ljava/lang/String;
+  
+      :cond_7
++     invoke-static {p0, v11}, Landroid/view/inputmethod/InputMethodManager$Injector;->handleBindLose(Landroid/view/inputmethod/InputMethodManager;Lcom/android/internal/view/InputBindResult;)V
++ 
+      iget-object v1, p0, Landroid/view/inputmethod/InputMethodManager;->mCurMethod:Lcom/android/internal/view/IInputMethodSession;
+  
+      if-eqz v1, :cond_8

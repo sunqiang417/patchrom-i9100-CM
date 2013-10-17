@@ -1,0 +1,19 @@
+*** ./smali/com/android/internal/policy/impl/KeyguardStatusViewManager.smali	2013-10-12 21:22:57.812392779 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/android.policy.jar.out/./smali/com/android/internal/policy/impl/KeyguardStatusViewManager.smali	2013-10-12 21:26:24.364402777 +0800
+***************
+*** 991,997 ****
+  
+      iput-object p1, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mSimState:Lcom/android/internal/telephony/IccCardConstants$State;
+  
+!     sget-object v2, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$2;->$SwitchMap$com$android$internal$policy$impl$keyguard_obsolete$KeyguardStatusViewManager$StatusMode:[I
+  
+      iget-object v3, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mStatus:Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
+  
+--- 991,997 ----
+  
+      iput-object p1, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mSimState:Lcom/android/internal/telephony/IccCardConstants$State;
+  
+!     sget-object v2, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$2;->$SwitchMap$com$android$internal$policy$impl$KeyguardStatusViewManager$StatusMode:[I
+  
+      iget-object v3, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mStatus:Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
+  

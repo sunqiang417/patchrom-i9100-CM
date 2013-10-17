@@ -1,0 +1,31 @@
+*** ./smali/com/android/internal/telephony/PhoneProxy.smali	2013-10-12 21:22:03.180390135 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/telephony-common.jar.out/./smali/com/android/internal/telephony/PhoneProxy.smali	2013-10-12 21:25:13.952399369 +0800
+***************
+*** 89,101 ****
+  
+      iput-object v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mIccSmsInterfaceManagerProxy:Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;
+  
+!     new-instance v0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
+  
+      invoke-virtual {p1}, Lcom/android/internal/telephony/PhoneBase;->getIccPhoneBookInterfaceManager()Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
+  
+      move-result-object v1
+  
+!     invoke-direct {v0, v1}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;-><init>(Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;)V
+  
+      iput-object v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mIccPhoneBookInterfaceManagerProxy:Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
+  
+--- 89,101 ----
+  
+      iput-object v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mIccSmsInterfaceManagerProxy:Lcom/android/internal/telephony/IccSmsInterfaceManagerProxy;
+  
+!     new-instance v0, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManagerProxy;
+  
+      invoke-virtual {p1}, Lcom/android/internal/telephony/PhoneBase;->getIccPhoneBookInterfaceManager()Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
+  
+      move-result-object v1
+  
+!     invoke-direct {v0, v1}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManagerProxy;-><init>(Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;)V
+  
+      iput-object v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mIccPhoneBookInterfaceManagerProxy:Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
+  

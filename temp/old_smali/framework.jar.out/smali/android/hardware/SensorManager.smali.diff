@@ -1,0 +1,21 @@
+*** ./smali/android/hardware/SensorManager.smali	2013-10-12 21:22:41.628391997 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/hardware/SensorManager.smali	2013-10-12 21:26:07.620401966 +0800
+***************
+*** 2294,2299 ****
+--- 2294,2309 ----
+  
+  
+  # virtual methods
++ .method public calibrateSensor(Landroid/hardware/Sensor;)Z
++     .locals 1
++     .parameter "sensor"
++ 
++     .prologue
++     const/4 v0, 0x0
++ 
++     return v0
++ .end method
++ 
+  .method public getDefaultSensor(I)Landroid/hardware/Sensor;
+      .locals 2
+      .parameter "type"

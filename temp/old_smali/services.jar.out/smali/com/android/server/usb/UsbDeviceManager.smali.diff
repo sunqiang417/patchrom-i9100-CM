@@ -1,0 +1,17 @@
+*** ./smali/com/android/server/usb/UsbDeviceManager.smali	2013-10-12 21:21:54.188389700 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/services.jar.out/./smali/com/android/server/usb/UsbDeviceManager.smali	2013-10-12 21:25:04.672398920 +0800
+***************
+*** 209,220 ****
+  
+      if-eqz v2, :cond_1
+  
+-     new-instance v2, Lcom/android/server/usb/UsbDebuggingManager;
+- 
+-     invoke-direct {v2, p1}, Lcom/android/server/usb/UsbDebuggingManager;-><init>(Landroid/content/Context;)V
+- 
+-     iput-object v2, p0, Lcom/android/server/usb/UsbDeviceManager;->mDebuggingManager:Lcom/android/server/usb/UsbDebuggingManager;
+- 
+      :cond_1
+      return-void
+  .end method
+--- 209,214 ----

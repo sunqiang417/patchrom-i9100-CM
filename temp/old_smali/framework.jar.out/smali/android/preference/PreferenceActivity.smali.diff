@@ -1,0 +1,23 @@
+*** ./smali/android/preference/PreferenceActivity.smali	2013-10-12 21:22:32.096391536 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/preference/PreferenceActivity.smali	2013-10-12 21:25:56.500401428 +0800
+***************
+*** 11,16 ****
+--- 11,17 ----
+  .annotation system Ldalvik/annotation/MemberClasses;
+      value = {
+          Landroid/preference/PreferenceActivity$Header;,
++         Landroid/preference/PreferenceActivity$Injector;,
+          Landroid/preference/PreferenceActivity$HeaderAdapter;
+      }
+  .end annotation
+***************
+*** 2045,2050 ****
+--- 2046,2053 ----
+  
+      if-lez v17, :cond_e
+  
++     invoke-static/range {p0 .. p0}, Landroid/preference/PreferenceActivity$Injector;->setListViewPadding(Landroid/preference/PreferenceActivity;)V
++ 
+      new-instance v17, Landroid/preference/PreferenceActivity$HeaderAdapter;
+  
+      move-object/from16 v0, p0

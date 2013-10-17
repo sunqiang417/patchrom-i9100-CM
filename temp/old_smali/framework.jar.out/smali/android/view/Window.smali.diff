@@ -1,0 +1,20 @@
+*** ./smali/android/view/Window.smali	2013-10-12 21:22:52.132392504 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/view/Window.smali	2013-10-12 21:26:18.648402500 +0800
+***************
+*** 709,714 ****
+--- 709,723 ----
+  .method public abstract isFloating()Z
+  .end method
+  
++ .method public isHardwareAccelerated()Z
++     .locals 1
++ 
++     .prologue
++     iget-boolean v0, p0, Landroid/view/Window;->mHardwareAccelerated:Z
++ 
++     return v0
++ .end method
++ 
+  .method public abstract isShortcutKey(ILandroid/view/KeyEvent;)Z
+  .end method
+  

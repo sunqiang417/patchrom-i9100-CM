@@ -1,0 +1,150 @@
+*** ./smali/android/app/DownloadManager$CursorTranslator.smali	2013-10-12 21:22:14.508390685 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/app/DownloadManager$CursorTranslator.smali	2013-10-12 21:25:30.600400175 +0800
+***************
+*** 9,15 ****
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0xa
+      name = "CursorTranslator"
+  .end annotation
+  
+--- 9,15 ----
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x8
+      name = "CursorTranslator"
+  .end annotation
+  
+***************
+*** 252,258 ****
+      .prologue
+      packed-switch p1, :pswitch_data_0
+  
+!     const-wide/16 v0, 0x4
+  
+      :goto_0
+      return-wide v0
+--- 252,260 ----
+      .prologue
+      packed-switch p1, :pswitch_data_0
+  
+!     invoke-static {p1}, Landroid/app/DownloadManager$Injector;->getPausedReason(I)J
+! 
+!     move-result-wide v0
+  
+      :goto_0
+      return-wide v0
+***************
+*** 287,293 ****
+      .parameter "status"
+  
+      .prologue
+!     invoke-direct {p0, p1}, Landroid/app/DownloadManager$CursorTranslator;->translateStatus(I)I
+  
+      move-result v0
+  
+--- 289,295 ----
+      .parameter "status"
+  
+      .prologue
+!     invoke-static {p1}, Landroid/app/DownloadManager$CursorTranslator;->translateStatus(I)I
+  
+      move-result v0
+  
+***************
+*** 319,337 ****
+      .end sparse-switch
+  .end method
+  
+! .method private translateStatus(I)I
+      .locals 1
+      .parameter "status"
+  
+      .prologue
+!     packed-switch p1, :pswitch_data_0
+  
+      :pswitch_0
+      sget-boolean v0, Landroid/app/DownloadManager$CursorTranslator;->$assertionsDisabled:Z
+  
+      if-nez v0, :cond_0
+  
+!     invoke-static {p1}, Landroid/provider/Downloads$Impl;->isStatusError(I)Z
+  
+      move-result v0
+  
+--- 321,339 ----
+      .end sparse-switch
+  .end method
+  
+! .method static translateStatus(I)I
+      .locals 1
+      .parameter "status"
+  
+      .prologue
+!     packed-switch p0, :pswitch_data_0
+  
+      :pswitch_0
+      sget-boolean v0, Landroid/app/DownloadManager$CursorTranslator;->$assertionsDisabled:Z
+  
+      if-nez v0, :cond_0
+  
+!     invoke-static {p0}, Landroid/provider/Downloads$Impl;->isStatusError(I)Z
+  
+      move-result v0
+  
+***************
+*** 389,394 ****
+--- 391,407 ----
+  
+  
+  # virtual methods
++ .method callGetLocalUri()Ljava/lang/String;
++     .locals 1
++ 
++     .prologue
++     invoke-direct {p0}, Landroid/app/DownloadManager$CursorTranslator;->getLocalUri()Ljava/lang/String;
++ 
++     move-result-object v0
++ 
++     return-object v0
++ .end method
++ 
+  .method public getInt(I)I
+      .locals 2
+      .parameter "columnIndex"
+***************
+*** 460,466 ****
+  
+      move-result v0
+  
+!     invoke-direct {p0, v0}, Landroid/app/DownloadManager$CursorTranslator;->translateStatus(I)I
+  
+      move-result v0
+  
+--- 473,479 ----
+  
+      move-result v0
+  
+!     invoke-static {v0}, Landroid/app/DownloadManager$CursorTranslator;->translateStatus(I)I
+  
+      move-result v0
+  
+***************
+*** 493,499 ****
+  
+      if-eqz v0, :cond_0
+  
+!     invoke-direct {p0}, Landroid/app/DownloadManager$CursorTranslator;->getLocalUri()Ljava/lang/String;
+  
+      move-result-object v0
+  
+--- 506,512 ----
+  
+      if-eqz v0, :cond_0
+  
+!     invoke-static {p0}, Landroid/app/DownloadManager$Injector;->getLocalUri(Landroid/app/DownloadManager$CursorTranslator;)Ljava/lang/String;
+  
+      move-result-object v0
+  

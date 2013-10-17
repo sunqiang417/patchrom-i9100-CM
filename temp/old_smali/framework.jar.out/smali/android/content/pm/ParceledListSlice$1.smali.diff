@@ -1,0 +1,13 @@
+*** ./smali/android/content/pm/ParceledListSlice$1.smali	2013-10-12 21:22:44.168392120 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/content/pm/ParceledListSlice$1.smali	2013-10-12 21:26:10.368402100 +0800
+***************
+*** 112,117 ****
+--- 112,119 ----
+  
+      invoke-direct {v5}, Landroid/content/pm/ParceledListSlice;-><init>()V
+  
++     invoke-virtual {v5, v0}, Landroid/content/pm/ParceledListSlice;->setLastSlice(Z)V
++ 
+      goto :goto_1
+  .end method
+  

@@ -1,0 +1,21 @@
+*** NetworkPolicyManagerService.smali	2013-10-12 21:21:57.072389841 +0800
+--- NetworkPolicyManagerService.smali	2013-10-12 21:25:07.444399053 +0800
+***************
+*** 1385,1394 ****
+  
+      .restart local v15       #title:Ljava/lang/CharSequence;
+      :goto_2
+-     const/4 v1, 0x1
+- 
+-     invoke-virtual {v9, v1}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
+- 
+      const v1, 0x108051c
+  
+      invoke-virtual {v9, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+--- 1380,1385 ----
+  
+      .restart local v15       #title:Ljava/lang/CharSequence;
+      :goto_2
+      const v1, 0x108051c
+  
+      invoke-virtual {v9, v1}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;

@@ -1,0 +1,112 @@
+*** ./smali/com/android/internal/telephony/gsm/SIMRecords.smali	2013-10-12 21:22:03.584390156 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/telephony-common.jar.out/./smali/com/android/internal/telephony/gsm/SIMRecords.smali	2013-10-12 21:25:14.368399388 +0800
+***************
+*** 7,13 ****
+  .annotation system Ldalvik/annotation/MemberClasses;
+      value = {
+          Lcom/android/internal/telephony/gsm/SIMRecords$1;,
+!         Lcom/android/internal/telephony/gsm/SIMRecords$Get_Spn_Fsm_State;
+      }
+  .end annotation
+  
+--- 7,14 ----
+  .annotation system Ldalvik/annotation/MemberClasses;
+      value = {
+          Lcom/android/internal/telephony/gsm/SIMRecords$1;,
+!         Lcom/android/internal/telephony/gsm/SIMRecords$Get_Spn_Fsm_State;,
+!         Lcom/android/internal/telephony/gsm/SIMRecords$Injector;
+      }
+  .end annotation
+  
+***************
+*** 916,926 ****
+  
+      iput-object v2, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->pnnHomeName:Ljava/lang/String;
+  
+!     new-instance v0, Lcom/android/internal/telephony/AdnRecordCache;
+  
+      iget-object v1, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->mFh:Lcom/android/internal/telephony/IccFileHandler;
+  
+!     invoke-direct {v0, v1}, Lcom/android/internal/telephony/AdnRecordCache;-><init>(Lcom/android/internal/telephony/IccFileHandler;)V
+  
+      iput-object v0, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->adnCache:Lcom/android/internal/telephony/AdnRecordCache;
+  
+--- 917,927 ----
+  
+      iput-object v2, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->pnnHomeName:Ljava/lang/String;
+  
+!     new-instance v0, Lcom/android/internal/telephony/MiuiAdnRecordCache;
+  
+      iget-object v1, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->mFh:Lcom/android/internal/telephony/IccFileHandler;
+  
+!     invoke-direct {v0, v1}, Lcom/android/internal/telephony/MiuiAdnRecordCache;-><init>(Lcom/android/internal/telephony/IccFileHandler;)V
+  
+      iput-object v0, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->adnCache:Lcom/android/internal/telephony/AdnRecordCache;
+  
+***************
+*** 930,938 ****
+  
+      iput-object v0, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->mVmConfig:Lcom/android/internal/telephony/gsm/VoiceMailConstants;
+  
+!     new-instance v0, Lcom/android/internal/telephony/gsm/SpnOverride;
+  
+!     invoke-direct {v0}, Lcom/android/internal/telephony/gsm/SpnOverride;-><init>()V
+  
+      iput-object v0, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->mSpnOverride:Lcom/android/internal/telephony/gsm/SpnOverride;
+  
+--- 931,939 ----
+  
+      iput-object v0, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->mVmConfig:Lcom/android/internal/telephony/gsm/VoiceMailConstants;
+  
+!     invoke-static {}, Lmiui/telephony/MiuiSpnOverride;->getImpl()Lcom/android/internal/telephony/gsm/SpnOverride;
+  
+!     move-result-object v0
+  
+      iput-object v0, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->mSpnOverride:Lcom/android/internal/telephony/gsm/SpnOverride;
+  
+***************
+*** 1864,1870 ****
+  
+      move-result-object v4
+  
+!     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+  
+      move-result v4
+  
+--- 1865,1871 ----
+  
+      move-result-object v4
+  
+!     invoke-static {p0, p1, v4}, Lcom/android/internal/telephony/gsm/SIMRecords$Injector;->isMatchingOperator(Lcom/android/internal/telephony/gsm/SIMRecords;Ljava/lang/String;Ljava/lang/String;)Z
+  
+      move-result v4
+  
+***************
+*** 2074,2079 ****
+--- 2075,2082 ----
+  
+      iput-object v0, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->spn:Ljava/lang/String;
+  
++     invoke-static {p0}, Lcom/android/internal/telephony/gsm/SIMRecords$Injector;->updateSpnDisplayCondition(Lcom/android/internal/telephony/gsm/SIMRecords;)V
++ 
+      :cond_0
+      return-void
+  .end method
+***************
+*** 2692,2697 ****
+--- 2695,2709 ----
+      goto :goto_0
+  .end method
+  
++ .method getSpn()Ljava/lang/String;
++     .locals 1
++ 
++     .prologue
++     iget-object v0, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->spn:Ljava/lang/String;
++ 
++     return-object v0
++ .end method
++ 
+  .method public getUsimServiceTable()Lcom/android/internal/telephony/gsm/UsimServiceTable;
+      .locals 1
+  

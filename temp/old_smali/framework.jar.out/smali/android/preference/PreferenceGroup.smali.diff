@@ -1,0 +1,13 @@
+*** ./smali/android/preference/PreferenceGroup.smali	2013-10-12 21:22:32.164391538 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/preference/PreferenceGroup.smali	2013-10-12 21:25:56.604401433 +0800
+***************
+*** 257,262 ****
+--- 257,264 ----
+      :cond_5
+      invoke-virtual {p0}, Landroid/preference/PreferenceGroup;->notifyHierarchyChanged()V
+  
++     invoke-virtual {p1, p0}, Landroid/preference/Preference;->setParent(Landroid/preference/PreferenceGroup;)V
++ 
+      move v1, v2
+  
+      goto :goto_0

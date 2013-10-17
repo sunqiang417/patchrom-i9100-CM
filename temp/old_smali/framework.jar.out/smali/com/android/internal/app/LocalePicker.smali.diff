@@ -1,0 +1,13 @@
+*** ./smali/com/android/internal/app/LocalePicker.smali	2013-10-12 21:22:06.992390321 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/com/android/internal/app/LocalePicker.smali	2013-10-12 21:25:19.380399632 +0800
+***************
+*** 359,364 ****
+--- 359,366 ----
+      :cond_4
+      invoke-static {v6}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
+  
++     invoke-static {v6}, Lmiui/util/ExtraLocalePicker;->adjustLocaleOrder([Lcom/android/internal/app/LocalePicker$LocaleInfo;)V
++ 
+      const-string v2, "layout_inflater"
+  
+      move-object/from16 v0, p0

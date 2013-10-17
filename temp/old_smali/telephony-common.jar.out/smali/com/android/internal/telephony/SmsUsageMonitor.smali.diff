@@ -1,0 +1,24 @@
+*** ./smali/com/android/internal/telephony/SmsUsageMonitor.smali	2013-10-12 21:22:05.920390268 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/telephony-common.jar.out/./smali/com/android/internal/telephony/SmsUsageMonitor.smali	2013-10-12 21:25:17.532399542 +0800
+***************
+*** 1679,1684 ****
+--- 1679,1697 ----
+      .parameter "smsWaiting"
+  
+      .prologue
++     const-string v1, "com.android.mms"
++ 
++     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
++ 
++     move-result v1
++ 
++     if-eqz v1, :cond_miui_0
++ 
++     const/4 v1, 0x1
++ 
++     return v1
++ 
++     :cond_miui_0
+      iget-object v2, p0, Lcom/android/internal/telephony/SmsUsageMonitor;->mSmsStamp:Ljava/util/HashMap;
+  
+      monitor-enter v2

@@ -1,0 +1,76 @@
+*** ./smali/com/android/internal/policy/impl/PatternUnlockScreen$4.smali	2013-10-12 21:22:53.724392582 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/android.policy.jar.out/./smali/com/android/internal/policy/impl/PatternUnlockScreen$4.smali	2013-10-12 21:26:20.228402576 +0800
+***************
+*** 15,21 ****
+  
+  
+  # static fields
+! .field static final synthetic $SwitchMap$com$android$internal$policy$impl$keyguard_obsolete$PatternUnlockScreen$FooterMode:[I
+  
+  
+  # direct methods
+--- 15,21 ----
+  
+  
+  # static fields
+! .field static final synthetic $SwitchMap$com$android$internal$policy$impl$PatternUnlockScreen$FooterMode:[I
+  
+  
+  # direct methods
+***************
+*** 31,40 ****
+  
+      new-array v0, v0, [I
+  
+!     sput-object v0, Lcom/android/internal/policy/impl/PatternUnlockScreen$4;->$SwitchMap$com$android$internal$policy$impl$keyguard_obsolete$PatternUnlockScreen$FooterMode:[I
+  
+      :try_start_0
+!     sget-object v0, Lcom/android/internal/policy/impl/PatternUnlockScreen$4;->$SwitchMap$com$android$internal$policy$impl$keyguard_obsolete$PatternUnlockScreen$FooterMode:[I
+  
+      sget-object v1, Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;->Normal:Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;
+  
+--- 31,40 ----
+  
+      new-array v0, v0, [I
+  
+!     sput-object v0, Lcom/android/internal/policy/impl/PatternUnlockScreen$4;->$SwitchMap$com$android$internal$policy$impl$PatternUnlockScreen$FooterMode:[I
+  
+      :try_start_0
+!     sget-object v0, Lcom/android/internal/policy/impl/PatternUnlockScreen$4;->$SwitchMap$com$android$internal$policy$impl$PatternUnlockScreen$FooterMode:[I
+  
+      sget-object v1, Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;->Normal:Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;
+  
+***************
+*** 50,56 ****
+  
+      :goto_0
+      :try_start_1
+!     sget-object v0, Lcom/android/internal/policy/impl/PatternUnlockScreen$4;->$SwitchMap$com$android$internal$policy$impl$keyguard_obsolete$PatternUnlockScreen$FooterMode:[I
+  
+      sget-object v1, Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;->ForgotLockPattern:Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;
+  
+--- 50,56 ----
+  
+      :goto_0
+      :try_start_1
+!     sget-object v0, Lcom/android/internal/policy/impl/PatternUnlockScreen$4;->$SwitchMap$com$android$internal$policy$impl$PatternUnlockScreen$FooterMode:[I
+  
+      sget-object v1, Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;->ForgotLockPattern:Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;
+  
+***************
+*** 66,72 ****
+  
+      :goto_1
+      :try_start_2
+!     sget-object v0, Lcom/android/internal/policy/impl/PatternUnlockScreen$4;->$SwitchMap$com$android$internal$policy$impl$keyguard_obsolete$PatternUnlockScreen$FooterMode:[I
+  
+      sget-object v1, Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;->VerifyUnlocked:Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;
+  
+--- 66,72 ----
+  
+      :goto_1
+      :try_start_2
+!     sget-object v0, Lcom/android/internal/policy/impl/PatternUnlockScreen$4;->$SwitchMap$com$android$internal$policy$impl$PatternUnlockScreen$FooterMode:[I
+  
+      sget-object v1, Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;->VerifyUnlocked:Lcom/android/internal/policy/impl/PatternUnlockScreen$FooterMode;
+  

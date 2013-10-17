@@ -1,0 +1,43 @@
+*** ./smali/android/widget/Chronometer.smali	2013-10-12 21:22:36.620391755 +0800
+--- /home/santajin/MIUI_42/i9100/temp/new_smali/framework.jar.out/./smali/android/widget/Chronometer.smali	2013-10-12 21:26:02.256401707 +0800
+***************
+*** 9,15 ****
+  
+  .annotation system Ldalvik/annotation/MemberClasses;
+      value = {
+!         Landroid/widget/Chronometer$OnChronometerTickListener;
+      }
+  .end annotation
+  
+--- 9,16 ----
+  
+  .annotation system Ldalvik/annotation/MemberClasses;
+      value = {
+!         Landroid/widget/Chronometer$OnChronometerTickListener;,
+!         Landroid/widget/Chronometer$Injector;
+      }
+  .end annotation
+  
+***************
+*** 247,255 ****
+  
+      div-long/2addr v2, v5
+  
+!     iget-object v5, p0, Landroid/widget/Chronometer;->mRecycle:Ljava/lang/StringBuilder;
+  
+!     invoke-static {v5, v2, v3}, Landroid/text/format/DateUtils;->formatElapsedTime(Ljava/lang/StringBuilder;J)Ljava/lang/String;
+  
+      move-result-object v4
+  
+--- 248,258 ----
+  
+      div-long/2addr v2, v5
+  
+!     iget-object v5, p0, Landroid/widget/Chronometer;->mContext:Landroid/content/Context;
+  
+!     iget-object v6, p0, Landroid/widget/Chronometer;->mRecycle:Ljava/lang/StringBuilder;
+! 
+!     invoke-static {v5, v6, v2, v3}, Landroid/widget/Chronometer$Injector;->formatElapsedTime(Landroid/content/Context;Ljava/lang/StringBuilder;J)Ljava/lang/String;
+  
+      move-result-object v4
+  
