@@ -48,6 +48,7 @@ local-pre-zip-misc:
 	cp other/boot.img $(ZIP_DIR)/boot.img
 	cp other/Gallery2.apk $(ZIP_DIR)/system/app/Gallery2.apk
 	cp other/OriginalSettings.apk $(ZIP_DIR)/system/app/OriginalSettings.apk
+	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
 	cp other/Generic.kl $(ZIP_DIR)/system/usr/keylayout/
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
