@@ -13,7 +13,7 @@ local-previous-target-dir := ~/workspace/ota_base/i9100_4.2
 
 # All apps from original ZIP, but has smali files chanded
 #local-modified-apps := GalaxyS2Settings Gallery2 OriginalSettings
-local-modified-apps := 
+local-modified-apps :=
 
 local-modified-jars :=
 
@@ -46,6 +46,8 @@ pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	@echo Update boot image
 	cp other/boot.img $(ZIP_DIR)/boot.img
+	@echo Add Stock APK
+	cp other/DeviceSettings.apk $(ZIP_DIR)/system/app/DeviceSettings.apk
 	cp other/Gallery2.apk $(ZIP_DIR)/system/app/Gallery2.apk
 	cp other/OriginalSettings.apk $(ZIP_DIR)/system/app/OriginalSettings.apk
 	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml

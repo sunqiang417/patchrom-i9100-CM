@@ -26,11 +26,11 @@
     <header android:icon="@drawable/ic_settings_multiuser" android:id="@id/user_settings" android:title="@string/user_settings_title" android:fragment="com.android.OriginalSettings.users.UserSettings" />
     <header android:id="@id/manufacturer_settings" android:fragment="com.android.OriginalSettings.WirelessSettings">
         <intent android:action="com.android.OriginalSettings.MANUFACTURER_APPLICATION_SETTING" />
-    </header>
-    <header android:icon="@drawable/ic_settings_advanced" android:id="@id/advanced_settings" android:title="@string/advanced_settings_title">
+    </header-->
+    <header android:icon="@drawable/ic_bt_config" android:id="@id/advanced_settings" android:title="@string/advanced_settings_title">
         <intent android:targetPackage="com.cyanogenmod.settings.device" android:action="com.cyanogenmod.action.LAUNCH_DEVICE_SETTINGS" android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
     </header>
-    <header android:id="@id/personal_section" android:title="@string/header_category_personal" />
+    <!--header android:id="@id/personal_section" android:title="@string/header_category_personal" />
     <header android:icon="@drawable/ic_settings_profiles" android:id="@id/profiles_settings" android:title="@string/profiles_settings_title" android:fragment="com.android.OriginalSettings.profiles.ProfilesSettings" />
     <header android:icon="@drawable/ic_settings_location" android:id="@id/location_settings" android:title="@string/location_settings_title" android:fragment="com.android.OriginalSettings.LocationSettings" />
     <header android:icon="@drawable/ic_settings_security" android:id="@id/security_settings" android:title="@string/security_settings_title" android:fragment="com.android.OriginalSettings.SecuritySettings" />
