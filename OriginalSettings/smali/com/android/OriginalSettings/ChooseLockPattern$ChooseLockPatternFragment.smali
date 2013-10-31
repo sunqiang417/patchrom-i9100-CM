@@ -1153,7 +1153,7 @@
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/LockPatternView;->setDisplayMode(Lcom/android/internal/widget/LockPatternView$DisplayMode;)V
 
     .line 483
-    sget-object v1, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$settings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
+    sget-object v1, Lcom/android/OriginalSettings/ChooseLockPattern$1;->$SwitchMap$com$android$OriginalSettings$ChooseLockPattern$ChooseLockPatternFragment$Stage:[I
 
     iget-object v2, p0, Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment;->mUiStage:Lcom/android/OriginalSettings/ChooseLockPattern$ChooseLockPatternFragment$Stage;
 

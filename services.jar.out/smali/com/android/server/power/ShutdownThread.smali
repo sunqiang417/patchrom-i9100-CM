@@ -990,9 +990,13 @@
     :cond_3
     sget-object v8, Lcom/android/server/power/ShutdownThread;->sConfirmDialog:Landroid/app/AlertDialog;
 
+
     sget-object v8, Lcom/android/server/power/ShutdownThread;->sConfirmDialog:Landroid/app/AlertDialog;
+
     invoke-static {v8}, Lcom/android/server/power/ShutdownThread$Injector;->setDialogTitle(Landroid/app/Dialog;)V
+
     sget-object v8, Lcom/android/server/power/ShutdownThread;->sConfirmDialog:Landroid/app/AlertDialog;
+
     iput-object v8, v1, Lcom/android/server/power/ShutdownThread$CloseDialogReceiver;->dialog:Landroid/app/Dialog;
 
     .line 215
@@ -1079,7 +1083,9 @@
     .restart local v6       #resourceId:I
     :goto_5
     invoke-static {v7}, Lcom/android/server/power/ShutdownThread$Injector;->getResourceId(I)I
+
     move-result v7
+
     const-string v8, "ShutdownThread"
 
     new-instance v9, Ljava/lang/StringBuilder;

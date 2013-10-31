@@ -7,8 +7,19 @@ local-phone-apps = ApplicationsProvider \
                    ChromeBookmarksSyncAdapter \
                    DefaultContainerService \
                    DrmProvider \
+                   DSPManager \
                    FaceLock \
                    Galaxy4 \
+                   GmsCore \
+                   GoogleBackupTransport \
+                   GoogleCalendarSyncAdapter \
+                   GoogleContactsSyncAdapter \
+                   GoogleEars \
+                   GoogleFeedback \
+                   GoogleLoginService \
+                   GooglePartnerSetup \
+                   GoogleServicesFramework \
+                   GoogleTTS \
                    HoloSpiralWallpaper \
                    HTMLViewer \
                    InputDevices \

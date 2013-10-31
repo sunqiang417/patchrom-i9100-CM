@@ -1316,7 +1316,7 @@
 
     .line 106
     :pswitch_1
-    sget-object v1, Lcom/android/OriginalSettings/wifi/AccessPoint$1;->$SwitchMap$com$android$settings$wifi$AccessPoint$PskType:[I
+    sget-object v1, Lcom/android/OriginalSettings/wifi/AccessPoint$1;->$SwitchMap$com$android$OriginalSettings$wifi$AccessPoint$PskType:[I
 
     iget-object v2, p0, Lcom/android/OriginalSettings/wifi/AccessPoint;->pskType:Lcom/android/OriginalSettings/wifi/AccessPoint$PskType;
 

@@ -3119,7 +3119,7 @@
     if-eqz v3, :cond_2
 
     .line 630
-    const-string v3, "com.android.settings.ChooseLockGeneric$ChooseLockGenericFragment"
+    const-string v3, "com.android.OriginalSettings.ChooseLockGeneric$ChooseLockGenericFragment"
 
     const/16 v6, 0x7b
 

@@ -62,80 +62,6 @@
                 <data android:mimeType="application/x-mpegurl" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/app_name" android:name="com.android.gallery3d.app.Gallery" android:configChanges="keyboardHidden|orientation|screenSize">
-            </activity>
-        <activity-alias android:label="@string/app_name" android:name="com.cooliris.media.Gallery" android:configChanges="keyboardHidden|orientation|screenSize" android:targetActivity="com.android.gallery3d.app.Gallery">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity-alias>
-        <activity android:label="@string/app_name" android:name="com.android.gallery3d.app.UsbDeviceActivity" android:taskAffinity="" android:launchMode="singleInstance">
-            <intent-filter>
-                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
-            </intent-filter>
-            <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@xml/device_filter" />
-        </activity>
-        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.android.gallery3d.app.Wallpaper" android:configChanges="keyboardHidden|orientation|screenSize">
-            <intent-filter android:label="@string/camera_setas_wallpaper">
-                <action android:name="android.intent.action.ATTACH_DATA" />
-                <data android:mimeType="image/*" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter android:label="@string/app_name">
-                <action android:name="android.intent.action.SET_WALLPAPER" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <meta-data android:name="android.wallpaper.preview" android:resource="@xml/wallpaper_picker_preview" />
-        </activity>
-        <activity android:label="@string/crop_label" android:name="com.android.gallery3d.app.CropImage" android:process=":crop" android:configChanges="keyboardHidden|orientation|screenSize">
-            <intent-filter android:label="@string/crop_label">
-                <action android:name="com.android.camera.action.CROP" />
-                <data android:scheme="http" />
-                <data android:scheme="https" />
-                <data android:scheme="content" />
-                <data android:scheme="file" />
-                <data android:scheme="" />
-                <data android:mimeType="image/*" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.ALTERNATIVE" />
-                <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
-            </intent-filter>
-        </activity>
-        <activity android:label="@string/trim_label" android:name="com.android.gallery3d.app.TrimVideo" />
-        <permission android:name="com.android.gallery3d.filtershow.permission.READ" android:protectionLevel="signature" />
-        <permission android:name="com.android.gallery3d.filtershow.permission.WRITE" android:protectionLevel="signature" />
-        <provider android:name="com.android.gallery3d.filtershow.provider.SharedImageProvider" android:readPermission="com.android.gallery3d.filtershow.permission.READ" android:writePermission="com.android.gallery3d.filtershow.permission.WRITE" android:authorities="com.android.gallery3d.filtershow.provider.SharedImageProvider" android:grantUriPermissions="true" />
-        <activity android:theme="@style/Theme.FilterShow" android:label="@string/title_activity_filter_show" android:name="com.android.gallery3d.filtershow.FilterShowActivity" android:configChanges="keyboardHidden|orientation|screenSize">
-            <intent-filter>
-                <action android:name="android.intent.action.EDIT" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="image/*" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="action_nextgen_edit" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="image/*" />
-            </intent-filter>
-            <intent-filter android:label="@string/crop_label">
-                <action android:name="com.android.camera.action.EDITOR_CROP" />
-                <data android:scheme="http" />
-                <data android:scheme="https" />
-                <data android:scheme="content" />
-                <data android:scheme="file" />
-                <data android:scheme="" />
-                <data android:mimeType="image/*" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.ALTERNATIVE" />
-                <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
-            </intent-filter>
-        </activity>
-        <uses-library android:name="com.google.android.media.effects" android:required="false" />
-        <activity android:theme="@style/Theme.Gallery" android:name="com.android.gallery3d.settings.GallerySettings" android:configChanges="keyboardHidden|orientation|screenSize" />
-        <provider android:name="com.android.gallery3d.provider.GalleryProvider" android:permission="com.android.gallery3d.permission.GALLERY_PROVIDER" android:exported="true" android:authorities="com.android.gallery3d.provider" android:syncable="false" android:grantUriPermissions="true" />
-        <activity android:name="com.android.gallery3d.gadget.WidgetClickHandler" />
-        <activity android:theme="@style/DialogPickerTheme" android:name="com.android.gallery3d.app.DialogPicker" android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity android:theme="@style/DialogPickerTheme" android:name="com.android.gallery3d.app.AlbumPicker" android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity android:theme="@style/Theme.Gallery.Dialog" android:name="com.android.gallery3d.gadget.WidgetTypeChooser" android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:theme="@style/Theme.Camera" android:label="@string/camera_label" android:icon="@mipmap/ic_launcher_camera" android:name="com.android.camera.CameraActivity" android:taskAffinity="com.android.camera.CameraActivity" android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
             <intent-filter>
                 <action android:name="android.media.action.IMAGE_CAPTURE" />
@@ -171,6 +97,46 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity-alias>
+        <activity android:label="@string/app_name" android:name="com.android.gallery3d.app.Gallery" android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <activity-alias android:label="@string/app_name" android:name="com.cooliris.media.Gallery" android:configChanges="keyboardHidden|orientation|screenSize" android:targetActivity="com.android.gallery3d.app.Gallery">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity-alias>
+        <activity android:label="@string/app_name" android:name="com.android.gallery3d.app.UsbDeviceActivity" android:taskAffinity="" android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@xml/device_filter" />
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.android.gallery3d.app.Wallpaper" android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter android:label="@string/camera_setas_wallpaper">
+                <action android:name="android.intent.action.ATTACH_DATA" />
+                <data android:mimeType="image/*" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.SET_WALLPAPER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="android.wallpaper.preview" android:resource="@xml/wallpaper_picker_preview" />
+        </activity>
+        <activity android:label="@string/crop_label" android:name="com.android.gallery3d.app.CropImage" android:process=":crop" android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <activity android:label="@string/trim_label" android:name="com.android.gallery3d.app.TrimVideo" />
+        <permission android:name="com.android.gallery3d.filtershow.permission.READ" android:protectionLevel="signature" />
+        <permission android:name="com.android.gallery3d.filtershow.permission.WRITE" android:protectionLevel="signature" />
+        <provider android:name="com.android.gallery3d.filtershow.provider.SharedImageProvider" android:readPermission="com.android.gallery3d.filtershow.permission.READ" android:writePermission="com.android.gallery3d.filtershow.permission.WRITE" android:authorities="com.android.gallery3d.filtershow.provider.SharedImageProvider" android:grantUriPermissions="true" />
+        <activity android:theme="@style/Theme.FilterShow" android:label="@string/title_activity_filter_show" android:name="com.android.gallery3d.filtershow.FilterShowActivity" android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <uses-library android:name="com.google.android.media.effects" android:required="false" />
+        <activity android:theme="@style/Theme.Gallery" android:name="com.android.gallery3d.settings.GallerySettings" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <provider android:name="com.android.gallery3d.provider.GalleryProvider" android:permission="com.android.gallery3d.permission.GALLERY_PROVIDER" android:exported="true" android:authorities="com.android.gallery3d.provider" android:syncable="false" android:grantUriPermissions="true" />
+        <activity android:name="com.android.gallery3d.gadget.WidgetClickHandler" />
+        <activity android:theme="@style/DialogPickerTheme" android:name="com.android.gallery3d.app.DialogPicker" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/DialogPickerTheme" android:name="com.android.gallery3d.app.AlbumPicker" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:theme="@style/Theme.Gallery.Dialog" android:name="com.android.gallery3d.gadget.WidgetTypeChooser" android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity-alias android:label="@string/video_camera_label" android:icon="@mipmap/ic_launcher_video_camera" android:name="com.android.camera.VideoCamera" android:targetActivity="com.android.camera.CameraActivity">
             <intent-filter>
                 <action android:name="android.media.action.VIDEO_CAMERA" />

@@ -1216,15 +1216,8 @@
 
     sput-object v2, Lcom/android/server/pm/PackageManagerService;->sUserManager:Lcom/android/server/pm/UserManagerService;
 
-    .line 1041
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/pm/PackageManagerService;->readPermissions()V
 
-    .line 1043
-
-
-
-
-    .line 1045
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
@@ -1237,6 +1230,7 @@
 
     move-result-object v3
 
+    .line 1045
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/pm/PackageManagerService;->mSdkVersion:I
@@ -3229,6 +3223,7 @@
     iput-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mRequiredVerifierPackage:Ljava/lang/String;
 
     invoke-static {}, Lcom/android/server/pm/ExtraPackageManagerServices;->postScanPackages()V
+
     .line 1353
     monitor-exit v47
     :try_end_9
@@ -16505,51 +16500,6 @@
 
     .line 3722
     :cond_6
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     new-instance v8, Ljava/io/File;
 
     move-object/from16 v0, p1
@@ -17380,8 +17330,11 @@
     .end local v49           #renamed:Ljava/lang/String;
     :cond_18
     move-object/from16 v0, p1
+
     move-object/from16 v1, v45
+
     invoke-static {v0, v1}, Lcom/android/server/pm/PackageManagerService$Injector;->addMiuiExtendFlags(Landroid/content/pm/PackageParser$Package;Lcom/android/server/pm/PackageSetting;)V
+
     move-object/from16 v0, v45
 
     iget-object v3, v0, Lcom/android/server/pm/PackageSetting;->origPackage:Lcom/android/server/pm/PackageSettingBase;
@@ -17491,38 +17444,7 @@
     iput v4, v3, Landroid/content/pm/ApplicationInfo;->flags:I
 
     :cond_1b
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     move-object/from16 v0, p1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     iget-object v3, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -18438,9 +18360,6 @@
 
     iget v3, v3, Landroid/content/pm/ApplicationInfo;->uid:I
 
-
-
-
     move-object/from16 v0, p0
 
     move-object/from16 v1, v44
@@ -18805,9 +18724,6 @@
     iget-object v3, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v3, v3, Landroid/content/pm/ApplicationInfo;->uid:I
-
-
-
 
     move-object/from16 v0, p0
 
@@ -37631,7 +37547,7 @@
     if-eqz v0, :cond_miui_0
 
     return-void
-    
+
     :cond_miui_0
     const/4 v2, 0x0
 

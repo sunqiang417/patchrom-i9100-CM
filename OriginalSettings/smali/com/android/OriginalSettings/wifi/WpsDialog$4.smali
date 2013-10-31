@@ -54,7 +54,7 @@
     const/16 v3, 0x8
 
     .line 214
-    sget-object v0, Lcom/android/OriginalSettings/wifi/WpsDialog$5;->$SwitchMap$com$android$settings$wifi$WpsDialog$DialogState:[I
+    sget-object v0, Lcom/android/OriginalSettings/wifi/WpsDialog$5;->$SwitchMap$com$android$OriginalSettings$wifi$WpsDialog$DialogState:[I
 
     iget-object v1, p0, Lcom/android/OriginalSettings/wifi/WpsDialog$4;->val$state:Lcom/android/OriginalSettings/wifi/WpsDialog$DialogState;
 

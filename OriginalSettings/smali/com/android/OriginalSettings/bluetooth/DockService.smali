@@ -2028,7 +2028,7 @@
     .line 463
     :cond_0
     :pswitch_2
-    const-string v4, "com.android.settings.bluetooth.action.DOCK_SHOW_UI"
+    const-string v4, "com.android.OriginalSettings.bluetooth.action.DOCK_SHOW_UI"
 
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 

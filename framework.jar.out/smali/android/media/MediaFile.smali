@@ -14,6 +14,7 @@
 
 # static fields
 .field public static final FILE_TYPE_3GPA:I = 0xb
+
 .field public static final FILE_TYPE_3G2B:I = 0xcf
 
 .field public static final FILE_TYPE_3GPP:I = 0x17
@@ -37,6 +38,7 @@
 .field public static final FILE_TYPE_BMP:I = 0x23
 
 .field public static final FILE_TYPE_F4V:I = 0xce
+
 .field public static final FILE_TYPE_DIVX:I = 0x1f
 
 .field public static final FILE_TYPE_DTS:I = 0x12c
@@ -46,6 +48,7 @@
 .field public static final FILE_TYPE_FL:I = 0x33
 
 .field public static final FILE_TYPE_FLAC:I = 0xa
+
 .field public static final FILE_TYPE_FLV:I = 0xc9
 
 .field public static final FILE_TYPE_GIF:I = 0x21
@@ -99,10 +102,13 @@
 .field public static final FILE_TYPE_QCP:I = 0xd
 
 .field public static final FILE_TYPE_RM:I = 0xca
+
 .field public static final FILE_TYPE_RMVB:I = 0xcb
+
 .field public static final FILE_TYPE_SMF:I = 0x12
 
 .field public static final FILE_TYPE_TEXT:I = 0x64
+
 .field public static final FILE_TYPE_VOB:I = 0xcd
 
 .field public static final FILE_TYPE_WAV:I = 0x3
@@ -132,6 +138,7 @@
 .field private static final FIRST_DRM_FILE_TYPE:I = 0x33
 
 .field private static final FIRST_FFMPEG_AUDIO_FILE_TYPE:I = 0x3e9
+
 .field private static final FIRST_IMAGE_FILE_TYPE:I = 0x20
 
 .field private static final FIRST_MIDI_FILE_TYPE:I = 0x11
@@ -147,6 +154,7 @@
 .field private static final LAST_AUDIO_FILE_TYPE2:I = 0x12c
 
 .field private static final LAST_DRM_FILE_TYPE:I = 0x33
+
 .field private static final LAST_FFMPEG_AUDIO_FILE_TYPE:I = 0x3e9
 
 .field private static final LAST_IMAGE_FILE_TYPE:I = 0x25
@@ -1263,10 +1271,15 @@
 
     .prologue
     const/16 v1, 0x3e9
+
     if-lt p0, v1, :cond_miui_0
+
     if-gt p0, v1, :cond_miui_0
+    
     const/4 v0, 0x1
+    
     return v0
+    
     :cond_miui_0
     const/16 v2, 0x12c
 

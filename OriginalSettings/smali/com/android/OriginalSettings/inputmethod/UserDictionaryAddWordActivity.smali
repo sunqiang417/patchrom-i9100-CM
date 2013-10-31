@@ -161,7 +161,7 @@
 
     .line 49
     .local v0, action:Ljava/lang/String;
-    const-string v4, "com.android.settings.USER_DICTIONARY_EDIT"
+    const-string v4, "com.android.OriginalSettings.USER_DICTIONARY_EDIT"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -214,7 +214,7 @@
     .end local v1           #args:Landroid/os/Bundle;
     .end local v3           #mode:I
     :cond_1
-    const-string v4, "com.android.settings.USER_DICTIONARY_INSERT"
+    const-string v4, "com.android.OriginalSettings.USER_DICTIONARY_INSERT"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
