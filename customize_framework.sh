@@ -31,6 +31,8 @@ then
     #rm -rf $BUILD_OUT/$SEP_FRAME/smali/miui
 	rm -rf "$BUILD_OUT/$SEP_FRAME/smali/android/"
 	mkdir -p "$BUILD_OUT/$SEP_FRAME/smali/android"
+        #overlay
+        cp -f overlay/Editor/* $BUILD_OUT/framework/smali/android/widget
     mv "$BUILD_OUT/framework/smali/android/widget" "$BUILD_OUT/$SEP_FRAME/smali/android/"
 	#mv "$BUILD_OUT/framework/smali/miui" "$BUILD_OUT/$SEP_FRAME/smali"
 fi
