@@ -51,7 +51,7 @@ local-pre-zip-misc:
 	cp other/Gallery2.apk $(ZIP_DIR)/system/app/Gallery2.apk
 	cp other/OriginalSettings.apk $(ZIP_DIR)/system/app/OriginalSettings.apk
 	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
-	cp $(ZIP_DIR)/system/framework/framework_ext.jar $(ZIP_DIR)/system/framework/ext.jar
+	cp $(TMP_DIR)/framework_ext.jar $(ZIP_DIR)/system/framework/ext.jar
 	rm -rf $(ZIP_DIR)/system/framework/framework_ext.jar
 	cp other/Generic.kl $(ZIP_DIR)/system/usr/keylayout/
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
