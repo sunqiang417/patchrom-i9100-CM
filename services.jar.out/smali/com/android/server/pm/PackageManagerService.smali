@@ -151,8 +151,6 @@
 
 .field static final TAG:Ljava/lang/String; = "PackageManager"
 
-.field private static final THEME_MAMANER_GUID:I = 0x514
-
 .field static final UPDATED_MEDIA_STATUS:I = 0xc
 
 .field static final UPDATE_PERMISSIONS_ALL:I = 0x1
@@ -951,19 +949,6 @@
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/server/pm/Settings;->addSharedUserLPw(Ljava/lang/String;II)Lcom/android/server/pm/SharedUserSetting;
 
     .line 997
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
-
-    const-string v3, "com.tmobile.thememanager"
-
-    const/16 v4, 0x514
-
-    const/4 v5, 0x1
-
-    invoke-virtual {v2, v3, v4, v5}, Lcom/android/server/pm/Settings;->addSharedUserLPw(Ljava/lang/String;II)Lcom/android/server/pm/SharedUserSetting;
-
-    .line 998
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
