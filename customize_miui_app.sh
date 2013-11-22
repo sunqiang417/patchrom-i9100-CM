@@ -56,6 +56,7 @@ if [ $1 = "ThemeManager" ];then
 fi
 
 if [ $1 = "MiuiHome" ];then
+    $XMLMERGYTOOL $1/res/values $2/res/values
     cp $1/*.part out/
     cd out
     $GIT_APPLY MiuiHome.part
