@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:title="@string/about_settings"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceScreen android:title="@string/additional_system_update_settings_list_item_title" android:key="additional_system_update_settings">
+    <!--PreferenceScreen android:title="@string/additional_system_update_settings_list_item_title" android:key="additional_system_update_settings">
         <intent android:targetPackage="@string/additional_system_update" android:action="android.intent.action.MAIN" android:targetClass="@string/additional_system_update_menu" />
     </PreferenceScreen>
     <PreferenceScreen android:title="@string/device_status" android:key="status_info" android:summary="@string/device_status_summary">
         <intent android:targetPackage="com.android.OriginalSettings" android:action="android.intent.action.MAIN" android:targetClass="com.android.OriginalSettings.deviceinfo.Status" />
-    </PreferenceScreen>
+    </PreferenceScreen-->
     <PreferenceScreen android:title="@string/cmupdate_settings_title" android:key="cm_updates" android:summary="@string/cmupdate_settings_summary">
         <intent android:targetPackage="com.cyanogenmod.updater" android:action="android.intent.action.MAIN" android:targetClass="com.cyanogenmod.updater.UpdatesSettings" />
     </PreferenceScreen>

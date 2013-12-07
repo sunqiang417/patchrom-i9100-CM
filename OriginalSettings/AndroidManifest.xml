@@ -877,7 +877,7 @@
             </intent-filter>
             <meta-data android:name="com.android.OriginalSettings.FRAGMENT_CLASS" android:value="com.android.OriginalSettings.cyanogenmod.SystemSettings" />
             <meta-data android:name="com.android.OriginalSettings.TOP_LEVEL_HEADER_ID" android:resource="@id/system_settings" />
-        </activity>
+        </activity-->
         <activity android:name=".cyanogenmod.PerformanceSettings" />
         <activity android:label="@string/quiet_hours_title" android:name="Settings$QuietHoursSettingsActivity" android:taskAffinity="" android:excludeFromRecents="true">
             <intent-filter>
@@ -887,7 +887,7 @@
             <meta-data android:name="com.android.OriginalSettings.FRAGMENT_CLASS" android:value="com.android.OriginalSettings.cyanogenmod.QuietHours" />
             <meta-data android:name="com.android.OriginalSettings.TOP_LEVEL_HEADER_ID" android:resource="@id/sound_settings" />
         </activity>
-        <activity android:name=".profiles.ProfilesSettings" />
+        <!--activity android:name=".profiles.ProfilesSettings" />
         <activity android:label="@string/profile_settings" android:name="Settings$ProfilesSettingsActivity" android:taskAffinity="" android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -975,13 +975,13 @@
             <intent-filter>
                 <action android:name="android.bluetooth.intent.DISCOVERABLE_TIMEOUT" />
             </intent-filter>
-        </receiver>
+        </receiver-->
         <receiver android:name=".cyanogenmod.BootReceiver" android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".users.ProfileUpdateReceiver">
+        <!--receiver android:name=".users.ProfileUpdateReceiver">
             <intent-filter>
                 <action android:name="android.provider.Contacts.PROFILE_CHANGED" />
             </intent-filter>

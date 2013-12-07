@@ -44,7 +44,7 @@
     <header android:icon="@drawable/ic_settings_date_time" android:id="@id/date_time_settings" android:title="@string/date_and_time_settings_title" android:fragment="com.android.OriginalSettings.DateTimeSettings" />
     <header android:icon="@drawable/ic_settings_accessibility" android:id="@id/accessibility_settings" android:title="@string/accessibility_settings" android:fragment="com.android.OriginalSettings.AccessibilitySettings" />
     <header android:icon="@drawable/ic_settings_development" android:id="@id/development_settings" android:title="@string/development_settings_title" android:fragment="com.android.OriginalSettings.DevelopmentSettings" />
-    <header android:icon="@drawable/ic_action_permission" android:id="@id/superuser" android:title="@string/superuser" android:fragment="com.android.OriginalSettings.cyanogenmod.superuser.PolicyNativeFragment" />
+    <header android:icon="@drawable/ic_action_permission" android:id="@id/superuser" android:title="@string/superuser" android:fragment="com.android.OriginalSettings.cyanogenmod.superuser.PolicyNativeFragment" /-->
     <header android:icon="@drawable/ic_settings_performance" android:id="@id/performance_settings" android:title="@string/performance_settings_title" android:fragment="com.android.OriginalSettings.cyanogenmod.PerformanceSettings" />
-    <header android:icon="@drawable/ic_settings_about" android:id="@id/about_settings" android:title="@string/about_settings" android:fragment="com.android.OriginalSettings.DeviceInfoSettings" /-->
+    <header android:icon="@drawable/ic_settings_about" android:id="@id/about_settings" android:title="@string/about_settings" android:fragment="com.android.OriginalSettings.DeviceInfoSettings" />
 </preference-headers>

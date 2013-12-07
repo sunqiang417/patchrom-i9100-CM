@@ -13,7 +13,7 @@ local-previous-target-dir := ~/workspace/ota_base/i9100_4.2
 
 # All apps from original ZIP, but has smali files chanded
 #local-modified-apps := DeviceSettings Gallery2 OriginalSettings
-local-modified-apps :=
+local-modified-apps :=OriginalSettings
 
 local-modified-jars :=
 
