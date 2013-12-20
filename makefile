@@ -45,7 +45,7 @@ updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	@echo Update boot image
-	cp other/boot.img $(ZIP_DIR)/boot.img
+	cp other/boot.img.old $(ZIP_DIR)/boot.img
 	@echo Add Stock APK
 	cp other/DeviceSettings.apk $(ZIP_DIR)/system/app/DeviceSettings.apk
 	cp other/Gallery2.apk $(ZIP_DIR)/system/app/Gallery2.apk
